@@ -40,7 +40,10 @@ public class Main4Activity extends AppCompatActivity {
     private void loadData() {
         houseList.add("Особняк");
         houseList.add("Кирпичный");
+        houseList.add("Коттедж");
+        houseList.add("Деревянный дом");
+        houseList.add("Таунхаус");
+    }
 
     }
 
-}
