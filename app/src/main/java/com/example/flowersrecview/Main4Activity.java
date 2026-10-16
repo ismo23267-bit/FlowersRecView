@@ -43,6 +43,12 @@ public class Main4Activity extends AppCompatActivity {
         houseList.add("Коттедж");
         houseList.add("Деревянный дом");
         houseList.add("Таунхаус");
+        houseList.add("Пентхаус");
+        houseList.add("Дуплекс");
+        houseList.add("Триплекс");
+
+
+
     }
 
     }
