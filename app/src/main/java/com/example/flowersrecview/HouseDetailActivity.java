@@ -18,8 +18,11 @@ public class HouseDetailActivity extends AppCompatActivity {
 
         String houseName = getIntent().getStringExtra("house_name");
 
-        tvHouseName.setText(houseName);
-
+        if (houseName != null && !houseName.isEmpty()) {
+            tvHouseName.setText(houseName);
+        } else {
+            tvHouseName.setText("Название дома не найдено");
+        }
         Button btnBack = findViewById(R.id.btn_back_detail);
 
         btnBack.setOnClickListener(v -> {
