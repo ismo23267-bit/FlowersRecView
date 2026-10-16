@@ -1,6 +1,7 @@
 
 package com.example.flowersrecview;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -13,7 +14,6 @@ public class HouseAdapters extends RecyclerView.Adapter<HouseViewHolder> {
 
     private final ArrayList<String> houseList;
 
-    // Конструктор
     public HouseAdapters(ArrayList<String> houseList) {
         this.houseList = houseList;
     }
@@ -33,7 +33,21 @@ public class HouseAdapters extends RecyclerView.Adapter<HouseViewHolder> {
     public void onBindViewHolder(
             @NonNull HouseViewHolder holder, int position) {
 
-        holder.bind(houseList.get(position));
+        String houseName = houseList.get(position);
+
+        holder.bind(houseName);
+
+        holder.itemView.setOnClickListener(view -> {
+
+            Intent intent = new Intent(
+                    view.getContext(),
+                    HouseDetailActivity.class
+            );
+
+            intent.putExtra("house_name", houseName);
+
+            view.getContext().startActivity(intent);
+        });
     }
 
     @Override
