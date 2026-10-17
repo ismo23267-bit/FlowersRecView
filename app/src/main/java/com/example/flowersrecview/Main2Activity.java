@@ -54,5 +54,7 @@ public class Main2Activity extends AppCompatActivity {
         carsList.add("Toyota");
         carsList.add("Honda");
         carsList.add("BYD");
+        carsList.add("Lexus");
+
     }
 }
